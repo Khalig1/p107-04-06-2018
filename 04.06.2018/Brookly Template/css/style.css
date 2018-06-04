@@ -1,0 +1,217 @@
+@font-face{
+    font-family: "Fontawesome";
+    src: url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
+    url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
+    url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
+    url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
+    url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+body{
+    height: 5000px;
+}
+/* my defaults */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'PT Serif', serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+/* UTILITY CLASSES */
+
+.d-flex{
+    display: flex;
+}
+.p-relative{
+    position: relative;
+}
+
+/* END OF UTILITY */
+
+/* HEADER */
+
+header .headerInner{
+    display: flex;
+    justify-content: space-between;
+}
+
+header .brand{
+    padding: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+header nav li{
+    list-style-type: none;
+}
+header nav li a{
+    padding: 20px;
+    padding-right: 0;
+    display: inline-block;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s linear;
+}
+header nav li a.active,
+header nav li a:hover{
+    color: #f6ac33;
+    border-color: #f6ac33;
+}
+header nav li:not(:last-child) a::after{
+    content: "•";
+    margin-left: 10px;
+}
+
+/* END OF HEADER */
+
+
+/* POSTER */
+#poster{
+    margin-top: 30px;
+    position: relative;
+}
+#poster .inner{
+    height: 800px;
+    background: url('../images/model.jpg');
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+#poster .inner *{
+    width: 100%;
+    text-align: center;
+}
+#poster h1{
+    font-size: 8em;
+}
+#poster p{
+    font-size: 2.2em;
+    font-family: 'Comfortaa', cursive;
+}
+#poster h1 span{
+    color: #f6ac33
+}
+.arrowD{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    color: white;
+    font-size: 3em;
+    transform: translateX(-50%);
+    animation: downArrow 3s cubic-bezier(0, 0.46, 1, 0.24) infinite;
+}
+/* END OF POSTER */
+
+/* SEETINGS */
+
+.settings{
+    position: fixed;
+    left: 0;
+    top: 25%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.settings a{
+    font-size: 2em;
+}
+.settings i{
+    color: black;
+    animation: rotate 2s linear infinite;
+}
+
+/* END OF SETTINGS */
+
+
+/* MAIN */
+
+main .wrapper{
+    background-color: #f9f9f9;
+    padding: 70px 0;
+}
+main .left{
+    width: 25%;
+    padding-left: 5%;
+}
+main .left h5{
+    color: #d8d6d7;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Comfortaa', cursive;
+}
+main .left h2{
+    margin: 15px 0;
+    font-size: 3em;
+}
+main .left hr{
+    width: 45px;
+    border: 2px solid #f6ac33; 
+    margin-bottom: 15px;
+}
+main .left p{
+    color: #444;
+}
+main .right{
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+main .right p{
+    width: 100%;
+    display: flex;
+}
+main .right a{
+    /* display: inline-block; */
+    width: 33%;
+    text-align: center;
+}
+main .right i{
+    display: block;
+    font-size: 5em;
+    color: #f6ac33;
+}
+main .right span{
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+}
+/* END OF MAIN */
+
+@keyframes downArrow{
+    0%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 10px;
+    }
+    100%{
+        bottom: 50px;
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
